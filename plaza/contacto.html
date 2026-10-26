@@ -27,3 +27,176 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - Sabores de la Plaza</title>
+
+  <!--link de google fonts con fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Merienda&display=swap"
+    rel="stylesheet">
+
+  <!--conexión con bootstrap, iconos y stylesheet-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--barra de navegación-->
+  <nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-shop-window"></i> Sabores de la Plaza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Nuestros puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+
+          <form>
+            <!--campo nombre-->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+
+            <!--campo teléfono o correo-->
+            <div class="mb-3">
+              <label for="contacto" class="form-label">Teléfono o Correo</label>
+              <input type="email" class="form-control" id="contacto">
+            </div>
+
+            <!--campo select 3 puestos-->
+            <div class="mb-3">
+              <label for="puesto" class="form-label">Selecciona el Puesto</label>
+              <select class="form-select" id="puesto">
+                <option value="1">Frutería Doña María</option>
+                <option value="2">Panadería El Maná</option>
+                <option value="3">Almuerzos Estela</option>
+              </select>
+            </div>
+
+            <!--campo textarea para el mensaje-->
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje o Pedido</label>
+              <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+
+            <!--botón type="submit" con clase btn y color-->
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConfirmacion">Enviar Pedido</button>
+          </form>
+
+          <!--preguntas frecuentes-->
+          <div class="mt-5">
+            <h3 class="h4 fw-bold text-center mb-4">Preguntas Frecuentes</h3>
+
+            <div class="accordion" id="acordeonPlaza">
+
+              <!--pregunta 1-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#preguntaUno"
+                    aria-expanded="true" aria-controls="preguntaUno">
+                    ¿Cómo hago un pedido al colectivo?
+                  </button>
+                </h2>
+                <div id="preguntaUno" class="accordion-collapse collapse show" data-bs-parent="#acordeonPlaza">
+                  <div class="accordion-body">
+                    Puedes escribirnos a través del formulario de arriba seleccionando el puesto de tu preferencia. Nos
+                    pondremos en contacto contigo de inmediato para coordinar la entrega.
+                  </div>
+                </div>
+              </div>
+
+              <!--pregunta 2-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#preguntaDos" aria-expanded="false" aria-controls="preguntaDos">
+                    ¿Cuáles son los horarios de entrega?
+                  </button>
+                </h2>
+                <div id="preguntaDos" class="accordion-collapse collapse" data-bs-parent="#acordeonPlaza">
+                  <div class="accordion-body">
+                    Hacemos entregas de lunes a sábado desde las 7:00 am hasta las 2:00 pm, garantizando que tus frutas,
+                    panes y almuerzos lleguen completamente frescos.
+                  </div>
+                </div>
+              </div>
+
+              <!--pregunta 3-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-theme="dark"
+                    data-bs-toggle="collapse" data-bs-target="#preguntaTres" aria-expanded="false"
+                    aria-controls="preguntaTres">
+                    ¿Qué medios de pago aceptan?
+                  </button>
+                </h2>
+                <div id="preguntaTres" class="accordion-collapse collapse" data-bs-parent="#acordeonPlaza">
+                  <div class="accordion-body">
+                    Aceptamos transferencias electrónicas, efectivo al momento de la entrega y pagos con tarjetas de
+                    débito o crédito directamente en el mercado.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--modal-->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="modalConfirmacionLabel">¡Pedido Recibido!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-content-plaintext p-3 text-muted">
+            Muchas gracias por escribirle a Sabores de la Plaza. El puesto seleccionado se comunicará contigo al
+            teléfono o correo registrado para finalizar tu pedido. ¡Apoyando al comercio local!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

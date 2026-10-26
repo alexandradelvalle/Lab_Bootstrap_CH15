@@ -28,3 +28,171 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros puestos - Sabores de la Plaza</title>
+
+  <!--link de google fonts con fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Merienda&display=swap"
+    rel="stylesheet">
+
+  <!--conexión con bootstrap, iconos y stylesheet-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--barra de navegación-->
+  <nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-shop-window"></i> Sabores de la Plaza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Nuestros puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container my-5">
+      <div class="row">
+
+        <!--categorías-->
+        <div class="col-12 col-lg-3 mb-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active bg-danger border-danger"
+              aria-current="true">Frutas</a>
+            <a href="#" class="list-group-item list-group-item-action">Panadería</a>
+            <a href="#" class="list-group-item list-group-item-action">Almuerzos</a>
+            <a href="#" class="list-group-item list-group-item-action">Jugos</a>
+            <a href="#" class="list-group-item list-group-item-action">Café</a>
+          </div>
+        </div>
+
+        <!--cards-->
+        <div class="col-12 col-lg-9">
+          <div class="row g-4">
+
+            <!--card 1: frutería-->
+            <div class="col-12 col-md-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Frutería Doña María</h5>
+                  <!--badge-->
+                  <span class="badge bg-success mb-2">100% Orgánico</span>
+                  <p class="card-text text-muted">Las mejores frutas seleccionadas directamente del campo. Frescura y
+                    color para tu hogar todos los días de la semana.</p>
+                  <a href="contacto.html" class="btn btn-primary">Hacer pedido</a>
+                </div>
+              </div>
+            </div>
+
+            <!--card 2: panadería-->
+            <div class="col-12 col-md-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Panadería El Maná</h5>
+                  <!--badge-->
+                  <span class="badge bg-info text-dark mb-2">Nuevo</span>
+                  <p class="card-text text-muted">Pan caliente hecho con recetas tradicionales. Disfruta de nuestros
+                    panes artesanales, buñuelos y almojábanas recién horneadas.</p>
+                  <a href="contacto.html" class="btn btn-primary">Hacer pedido</a>
+                </div>
+              </div>
+            </div>
+
+            <!--card 3: almuerzos-->
+            <div class="col-12 col-md-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Almuerzos Caseros Estela</h5>
+                  <!--badge-->
+                  <span class="badge bg-warning text-dark mb-2">Popular</span>
+                  <p class="card-text text-muted">El verdadero sabor de la comida casera. Corrientazos y platos típicos
+                    preparados con sazón tradicional, amor y la frescura de la plaza.</p>
+                  <a href="contacto.html" class="btn btn-primary">Hacer pedido</a>
+                </div>
+              </div>
+            </div>
+
+            <!--card 4: jugos y café-->
+            <div class="col-12 col-md-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Jugos y Café Central</h5>
+                  <!--badge-->
+                  <span class="badge bg-success mb-2">Sin conservantes</span>
+                  <p class="card-text text-muted">Bebidas 100% naturales licuadas al instante y el mejor café cálido de
+                    la región para empezar tus mañanas con toda la energía.</p>
+                  <a href="contacto.html" class="btn btn-primary">Hacer pedido</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--tabla de precios-->
+          <div class="mt-5">
+            <h3 class="h4 fw-bold mb-3"><i class="bi bi-tags"></i> Precios Destacados</h3>
+            <table class="table table-hover align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Puesto</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Canasta de Frutas Surtidas</td>
+                  <td>Frutería Doña María</td>
+                  <td>$15.000</td>
+                </tr>
+                <tr>
+                  <td>Pan Artesanal de Masa Madre</td>
+                  <td>Panadería El Maná</td>
+                  <td>$7.000</td>
+                </tr>
+                <tr>
+                  <td>Almuerzo Ejecutivo</td>
+                  <td>Almuerzos Caseros Estela</td>
+                  <td>$12.000</td>
+                </tr>
+                <tr>
+                  <td>Café Especial de la Casa (Libra)</td>
+                  <td>Jugos y Café Central</td>
+                  <td>$18.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
